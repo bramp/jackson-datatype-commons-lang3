@@ -35,6 +35,10 @@ public class FractionTest {
         assertEquals(Fraction.getFraction(0), mapper.readValue("\"0\"", Fraction.class));
         assertEquals(Fraction.getFraction(1, 2), mapper.readValue("\"1/2\"", Fraction.class));
 
+        assertEquals(Fraction.getFraction(30000, 1001), mapper.readValue("\"30000/1001\"", Fraction.class));
+        assertEquals(Fraction.getFraction(30000, 1001), mapper.readValue("\"29 971/1001\"", Fraction.class));
+        assertEquals(Fraction.getFraction(29, 971, 1001), mapper.readValue("\"29 971/1001\"", Fraction.class));
+
         // Special case for ffmpeg (we should consider removing it!) 0/0 is undefined
         assertEquals(Fraction.getFraction(0), mapper.readValue("\"0/0\"", Fraction.class));
     }
@@ -55,5 +59,6 @@ public class FractionTest {
         assertEquals("\"0\"", mapper.writeValueAsString(Fraction.ZERO));
         assertEquals("\"1\"", mapper.writeValueAsString(Fraction.ONE));
         assertEquals("\"1/2\"", mapper.writeValueAsString(Fraction.ONE_HALF));
+        assertEquals("\"29 971/1001\"", mapper.writeValueAsString(Fraction.getFraction(30000, 1001)));
     }
 }

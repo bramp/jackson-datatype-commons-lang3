@@ -21,8 +21,16 @@ public class FractionSerializer extends StdSerializer<Fraction> {
         if (value == null) {
             jgen.writeNull();
         } else {
-            //jgen.writeString( value.toProperString() );
-            jgen.writeString( value.toString() );
+            /*
+            String s;
+            if (value.getNumerator() == 0) {
+                s = "0";
+            } else {
+                s = value.toString(); // value.toProperString()
+            }
+            */
+            String s = value.toProperString();
+            jgen.writeString( s );
         }
     }
 }
