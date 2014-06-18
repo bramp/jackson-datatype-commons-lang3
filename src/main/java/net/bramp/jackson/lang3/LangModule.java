@@ -1,8 +1,6 @@
 package net.bramp.jackson.lang3;
 
-import com.fasterxml.jackson.databind.module.SimpleDeserializers;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.fasterxml.jackson.databind.module.SimpleSerializers;
 
 import org.apache.commons.lang3.math.Fraction;
 
