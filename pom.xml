@@ -4,7 +4,7 @@
 
     <groupId>net.bramp.jackson</groupId>
     <artifactId>jackson-datatype-commons-lang3</artifactId>
-    <version>0.1</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Jackson Datatypes Apache Commons Lang3</name>
@@ -14,7 +14,7 @@
     <scm>
         <url>https://github.com/bramp/jackson-datatype-commons-lang3</url>
         <connection>scm:git:git@github.com:bramp/jackson-datatype-commons-lang3.git</connection>
-      <tag>jackson-datatype-commons-lang3-0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <licenses>
