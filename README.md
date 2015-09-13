@@ -32,7 +32,7 @@ class Demo {
 
 ```json
 {
-	fraction1: "1/2",
-	fraction2: "29 971/1001"
+	"fraction1": "1/2",
+	"fraction2": "29 971/1001"
 }
 ```
